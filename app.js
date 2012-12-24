@@ -139,6 +139,7 @@ var DirectoryView = Backbone.View.extend({
     },
     removeContact: function(removedModel){
     	var removed = removedModel.attributes;
+        //checks to see if default photo exists if it does remote the photo attribute from the object
     	if(removed.photo === "/img/placeholder.png"){
     		delete removed.photo;
     	}
